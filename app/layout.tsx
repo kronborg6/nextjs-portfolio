@@ -23,7 +23,7 @@ export default function RootLayout({
           <Link className="mr-3 text-xl font-bold" href="/">
             KronborgCode
           </Link>
-          <Link href="/home">Project</Link>
+          <Link href="/projects">Projects</Link>
         </header>
         {children}
         <SpeedInsights />
