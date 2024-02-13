@@ -18,7 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <SpeedInsights />
       <body className={inter.className}>
         <header>
           <Link className="mr-3 text-xl font-bold" href="/">
@@ -27,6 +26,7 @@ export default function RootLayout({
           <Link href="/home">Project</Link>
         </header>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
