@@ -12,10 +12,31 @@ const projects = [
     title: "Hjemmeside",
     dec: "Jeg har lavet det her",
     tags: [tags[5], tags[3], tags[4]],
-    links: ["", "", ""],
+    links: ["g", "", "gg"],
   },
   {
     id: 3,
+    title: "Hjemmeside",
+    dec: "Jeg har lavet det her",
+    tags: [tags[0], tags[2], tags[4]],
+    links: ["https://www.google.com", "https://www.facebook.com", ""],
+  },
+  {
+    id: 4,
+    title: "Hjemmeside",
+    dec: "Jeg har lavet det her",
+    tags: [tags[0], tags[2], tags[4]],
+    links: ["https://www.google.com", "https://www.facebook.com"],
+  },
+  {
+    id: 5,
+    title: "Hjemmeside",
+    dec: "Jeg har lavet det her",
+    tags: [tags[5], tags[3], tags[4]],
+    links: ["gg", "", ""],
+  },
+  {
+    id: 6,
     title: "Hjemmeside",
     dec: "Jeg har lavet det her",
     tags: [tags[0], tags[2], tags[4]],
@@ -39,7 +60,7 @@ export default function Project() {
                 <div className="z-20 flex h-full w-full flex-col gap-4 bg-card-dots p-card-inner transition-[background-position] duration-300 ease-in-out">
                   <div className="flex-1">
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
-                      <div className="bg-red-500 rounded-lg mb-5">
+                      <div className="bg-red-500 rounded-lg mb-10">
                         <span className="text-xl font-bold">{data.title}</span>
                         <div>
                           <p>{data.dec}</p>
@@ -56,7 +77,7 @@ export default function Project() {
                             </span>
                           ))}
                         </div>
-                        <div className="flex h-full w-fit items-end justify-end">
+                        <div className="flex h-5 w-fit items-end justify-end">
                           <div className="darken-bg flex flex-col space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
                             {data.links[0] ? (
                               <a href={data.links[0]}>
