@@ -2,14 +2,14 @@ const tags = ["C#", "C++", "JavaScript", "TypeScript", "Golang", "Rust"];
 const projects = [
   {
     id: 1,
-    title: "Hjemmeside",
+    title: "Portfolio Website",
     dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[2], tags[4]],
+    tags: [tags[3]],
     links: ["https://www.google.com", "https://www.facebook.com"],
   },
   {
     id: 2,
-    title: "Hjemmeside",
+    title: "Pick your electives website (School)",
     dec: "Jeg har lavet det her",
     tags: [tags[5], tags[3], tags[4]],
     links: ["g", "", "gg"],
@@ -57,7 +57,7 @@ export default function Project() {
                 key={data.id}
                 className="relative overflow-clip rounded-md border border-border transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-transparent hover:bg-transparent hover:before:bg-card-gradient-hover sm:hover:scale-[1.025] [&:hover>div]:bg-card-dots-hover [&:hover_.darken-bg]:bg-black [&:hover_.darken-bg]:bg-opacity-30"
               >
-                <div className="z-20 flex h-full w-full flex-col gap-4 bg-card-dots p-card-inner transition-[background-position] duration-300 ease-in-out">
+                <div className="z-20 flex h-full w-full flex-col gap-4 transition-[background-position] duration-300 ease-in-out">
                   <div className="flex-1">
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
                       <div className="bg-red-500 rounded-lg mb-10">
@@ -66,32 +66,34 @@ export default function Project() {
                           <p>{data.dec}</p>
                         </div>
                       </div>
-                      <div className="flex gap-1">
+                      <div className="flex gap-1a h-16">
                         <div className="flex w-full flex-1 flex-wrap items-end gap-4">
                           {data.tags.map((tag) => (
                             <span
                               key={data.id}
-                              className="bg-gray-400 px-2 rounded-md"
+                              className="bg-gray-400 px-2 py-1 rounded-md"
                             >
                               {tag}
                             </span>
                           ))}
                         </div>
-                        <div className="flex h-5 w-fit items-end justify-end">
-                          <div className="darken-bg flex flex-col space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
+                        <div className="flex h-full w-fit items-end justify-end">
+                          <div className="darken-bg flex flex-col items-end space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
                             {data.links[0] ? (
                               <a href={data.links[0]}>
-                                <svg
-                                  stroke="currentColor"
-                                  fill="currentColor"
-                                  viewBox="0 0 24 24"
-                                  aria-hidden="true"
-                                  height="20"
-                                  width="20"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"></path>
-                                </svg>
+                                <span className="inline-block whitespace-nowrap transition-colors items-end text-white hover:text-black">
+                                  <svg
+                                    stroke="currentColor"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    height="20"
+                                    width="20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"></path>
+                                  </svg>
+                                </span>
                               </a>
                             ) : null}
                             {data.links[1] ? (
