@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -54,7 +55,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <SpeedInsights />
+        <Analytics />
         <footer className="flex flex-col items-center justify-center border-t border-opacity-50 border-blue-500 px-4 py-4">
           <div>
             <span className="font-bold">©KronborgCode</span>
