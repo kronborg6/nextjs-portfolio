@@ -55,9 +55,9 @@ export default function RootLayout({
         </header>
         {children}
         <SpeedInsights />
-        <footer className="flex flex-col items-center justify-center border-t border-border px-4 py-4">
+        <footer className="flex flex-col items-center justify-center border-t border-opacity-50 border-blue-500 px-4 py-4">
           <div>
-            <span>Kronborg</span>
+            <span className="font-bold">©KronborgCode</span>
           </div>
         </footer>
       </body>
