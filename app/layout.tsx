@@ -33,6 +33,11 @@ export default function RootLayout({
                   Projects
                 </span>
               </Link>
+              <Link href="/aboutme">
+                <span className="border-r pr-3 transition-colors hover:rounded-md hover:pr-0 hover:mr-3 hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
+                  Projects
+                </span>
+              </Link>
             </nav>
             <nav className="flex space-x-4 ml-auto">
               <Link
@@ -57,8 +62,16 @@ export default function RootLayout({
         {children}
         <Analytics />
         <footer className="flex flex-col items-center justify-center border-t border-opacity-50 border-blue-500 px-4 py-4">
-          <div>
-            <span className="font-bold">©KronborgCode</span>
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="flex flex-col">
+              <span className="font-bold">©KronborgCode</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold">©KronborgCode</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold">©KronborgCode</span>
+            </div>
           </div>
         </footer>
       </body>

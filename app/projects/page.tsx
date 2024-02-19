@@ -1,54 +1,68 @@
 import { randomInt } from "crypto";
 
-const tags = ["C#", "C++", "JavaScript", "TypeScript", "Golang", "Rust"];
+const tags = [
+  "C#",
+  "C++",
+  "JavaScript",
+  "TypeScript",
+  "Golang",
+  "Rust",
+  "Hosting",
+  "MySql",
+  "Prisma",
+];
 const projects = [
   {
     id: 1,
     title: "Portfolio Website",
     dec: "Jeg har lavet det her",
     tags: [tags[3]],
-    links: ["https://www.google.com", "https://www.facebook.com"],
+    links: [
+      "",
+      "https://github.com/kronborg6/nextjs-portfolio",
+      "https://www.kronborgcode.com",
+    ],
   },
   {
     id: 2,
     title: "Pick your electives website",
-    dec: "Jeg har lavet det her",
-    tags: [tags[5], tags[3], tags[4]],
-    links: ["g", "", "gg"],
+    dec: "i made the api and database",
+    tags: [tags[2], tags[8], tags[7]],
+    links: ["", "", "https://valgfag.sde.dk/login/"],
   },
   {
     id: 3,
-    title: "Hjemmeside",
+    title: "SimSvend",
     dec: "Jeg har lavet det her",
     tags: [tags[0], tags[2], tags[4]],
     links: ["https://www.google.com", "https://www.facebook.com", ""],
   },
   {
     id: 4,
-    title: "Hjemmeside",
+    title: "Sea of Keys",
     dec: "Jeg har lavet det her",
     tags: [tags[0], tags[2], tags[4]],
     links: ["https://www.google.com", "https://www.facebook.com"],
   },
-  {
-    id: 5,
-    title: "Hjemmeside",
-    dec: "Jeg har lavet det her",
-    tags: [tags[5], tags[3], tags[4]],
-    links: ["gg", "", ""],
-  },
-  {
-    id: 22,
-    title: "Hjemmeside",
-    dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[2], tags[4]],
-    links: ["https://www.google.com", "https://www.facebook.com", ""],
-  },
+  // {
+  //   id: 5,
+  //   title: "Hjemmeside",
+  //   dec: "Jeg har lavet det her",
+  //   tags: [tags[5], tags[3], tags[4]],
+  //   links: ["gg", "", ""],
+  // },
+  // {
+  //   id: 22,
+  //   title: "Hjemmeside",
+  //   dec: "Jeg har lavet det her",
+  //   tags: [tags[0], tags[2], tags[4]],
+  //   links: ["https://www.google.com", "https://www.facebook.com", ""],
+  // },
 ];
 
 export default function Project() {
   return (
-    <div className="scrollbar flex flex-1 flex-col overflow-y-scroll pt-12">
+    <div className="scrollbar flex flex-1 flex-col overflow-y-scroll pt-12 min-h-screen">
       <div className="flex-1 gap-8 p-4 transition-[padding] sm:p-8">
         <div className="mx-auto h-full max-w-6xl">
           <div className="mx-auto mb-4 max-w-prose"></div>
@@ -63,12 +77,16 @@ export default function Project() {
                   <div className="flex-1">
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
                       <div className="bg-red-500 rounded-lg mb-10">
-                        <span className="text-xl font-bold">{data.title}</span>
+                        <span className="block text-center text-xl font-bold">
+                          {data.title}
+                        </span>
                         <div>
+                          <br />
+                          <br />
                           <p>{data.dec}</p>
                         </div>
                       </div>
-                      <div className="flex gap-1 h-52">
+                      <div className="flex gap-1 h-32">
                         <div className="flex w-full flex-1 flex-wrap items-end gap-4">
                           {data.tags.map((tag) => (
                             <span
