@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,12 +26,12 @@ export default function RootLayout({
                 KronborgCode
               </h1>
             </Link>
-            <nav className="hidden md:flex space-x-4 mx-10">
-              <Link href="/projects">
+            <nav className="md:flex space-x-4 mx-10">
+              {/*              <Link href="/projects">
                 <span className="border-r pr-3 transition-colors hover:rounded-md hover:pr-0 hover:mr-3 hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Projects
                 </span>
-              </Link>
+              </Link>*/}
               <Link href="/aboutme">
                 <span className="border-r pr-3 transition-colors hover:rounded-md hover:pr-0 hover:mr-3 hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Projects
