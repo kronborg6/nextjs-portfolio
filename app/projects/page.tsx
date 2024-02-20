@@ -62,7 +62,7 @@ const projects = [
 
 export default function Project() {
   return (
-    <div className="scrollbar flex flex-1 flex-col overflow-y-scroll pt-12 min-h-screen">
+    <div className="flex flex-1 flex-col pt-12 min-h-screen">
       <div className="flex-1 gap-8 p-4 transition-[padding] sm:p-8">
         <div className="mx-auto h-full max-w-6xl">
           <div className="mx-auto mb-4 max-w-prose">
