@@ -65,25 +65,28 @@ export default function Project() {
     <div className="scrollbar flex flex-1 flex-col overflow-y-scroll pt-12 min-h-screen">
       <div className="flex-1 gap-8 p-4 transition-[padding] sm:p-8">
         <div className="mx-auto h-full max-w-6xl">
-          <div className="mx-auto mb-4 max-w-prose"></div>
+          <div className="mx-auto mb-4 max-w-prose">
+            <h1 className="text-4xl font-bold text-center text-white">
+              Projects
+            </h1>
+          </div>
           <div className="grid auto-rows-fr grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {/* Number 1 */}
             {projects.map((data) => (
               <div
                 key={data.id}
-                className="relative overflow-clip rounded-md border border-border transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-transparent hover:bg-transparent hover:before:bg-card-gradient-hover sm:hover:scale-[1.025] [&:hover>div]:bg-card-dots-hover [&:hover_.darken-bg]:bg-black [&:hover_.darken-bg]:bg-opacity-30"
+                className="relative overflow-clip rounded-md border-2 border-gray-500 transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-gray-950 hover:before:bg-card-gradient-hover sm:hover:scale-[1.025]"
               >
                 <div className="z-20 flex h-full w-full flex-col gap-4 transition-[background-position] duration-300 ease-in-out">
                   <div className="flex-1">
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
-                      <div className="bg-red-500 rounded-lg mb-10">
+                      <div className="bg-gray-800 rounded-lg mb-10">
                         <span className="block text-center text-xl font-bold">
                           {data.title}
                         </span>
                         <div>
                           <br />
-                          <br />
-                          <p>{data.dec}</p>
+                          <p className="mx-5 pb-2">{data.dec}</p>
                         </div>
                       </div>
                       <div className="flex gap-1 h-32">
@@ -91,7 +94,7 @@ export default function Project() {
                           {data.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="bg-gray-400 px-2 py-1 rounded-md"
+                              className="bg-gray-900 px-2 py-1 rounded-md"
                             >
                               {tag}
                             </span>
