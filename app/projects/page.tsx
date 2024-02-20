@@ -141,7 +141,7 @@ export default function Project() {
                             {data.links[2] ? (
                               <a
                                 aria-label="DangerousTool"
-                                href="https://dangeroustool.devminer.xyz"
+                                href={data.links[2]}
                                 className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
                                 target="_blank"
                                 rel="noopener noreferrer"
