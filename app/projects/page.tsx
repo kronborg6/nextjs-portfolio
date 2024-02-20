@@ -1,5 +1,3 @@
-import { randomInt } from "crypto";
-
 const tags = [
   "C#",
   "C++",
@@ -10,12 +8,15 @@ const tags = [
   "Hosting",
   "MySql",
   "Prisma",
+  "Python",
+  "Gorm",
+  "GoFiber",
 ];
 const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    dec: "Jeg har lavet det her",
+    dec: "a website to collect my projects and info",
     tags: [tags[3]],
     links: [
       "",
@@ -34,15 +35,15 @@ const projects = [
     id: 3,
     title: "SimSvend",
     dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[2], tags[4]],
-    links: ["https://www.google.com", "https://www.facebook.com", ""],
+    tags: [tags[4], tags[11], tags[10]],
+    links: ["", "https://github.com/kronborg6/SimSvendApi", ""],
   },
   {
     id: 4,
     title: "Sea of Keys",
     dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[2], tags[4]],
-    links: ["https://www.google.com", "https://www.facebook.com"],
+    tags: [tags[4], tags[9], tags[7]],
+    links: ["", "https://github.com/orgs/Sea-of-Keys/repositories"],
   },
   // {
   //   id: 5,
@@ -65,19 +66,17 @@ export default function Project() {
     <div className="flex flex-1 flex-col pt-12 min-h-screen">
       <div className="flex-1 gap-8 p-4 transition-[padding] sm:p-8">
         <div className="mx-auto h-full max-w-6xl">
-          <div className="mx-auto mb-4 max-w-prose">
-            <h1 className="text-4xl font-bold text-center text-white">
-              Projects
-            </h1>
+          <div className="mx-auto mb-4 max-w-prose text-center">
+            <h1 className="text-4xl font-bold text-white mb-2">Projects</h1>
+            <p>Here are some of the projects I have made.</p>
           </div>
           <div className="grid auto-rows-fr grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-            {/* Number 1 */}
             {projects.map((data) => (
               <div
                 key={data.id}
                 className="relative overflow-clip rounded-md border-2 border-gray-500 transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-gray-950 hover:before:bg-card-gradient-hover sm:hover:scale-[1.025]"
               >
-                <div className="z-20 flex h-full w-full flex-col gap-4 transition-[background-position] duration-300 ease-in-out">
+                <div className="z-20 flex h-full w-full flex-col transition-[background-position] duration-300 ease-in-out">
                   <div className="flex-1">
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
                       <div className="bg-gray-800 rounded-lg mb-10">
@@ -86,10 +85,10 @@ export default function Project() {
                         </span>
                         <div>
                           <br />
-                          <p className="mx-5 pb-2">{data.dec}</p>
+                          <p className="mx-2">{data.dec}</p>
                         </div>
                       </div>
-                      <div className="flex gap-1 h-32">
+                      <div className="flex gap-2 flex-wrap h-32">
                         <div className="flex w-full flex-1 flex-wrap items-end gap-4">
                           {data.tags.map((tag) => (
                             <span
