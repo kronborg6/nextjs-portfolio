@@ -32,7 +32,7 @@ export default function RootLayout({
                   Projects
                 </span>
               </Link>*/}
-              <Link href="/aboutme">
+              <Link href="/projects">
                 <span className="border-r pr-3 transition-colors hover:rounded-md hover:pr-0 hover:mr-3 hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Projects
                 </span>

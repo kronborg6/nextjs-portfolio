@@ -16,9 +16,9 @@ const frameworks = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center p-24">
+    <main className="flex flex-col items-center py-24 min-h-screen">
       <h1 className="text-9xl mb-12">Kronborg</h1>
-      <div className="flex flex-col space-y-8">
+      <div className="grid auto-rows-fr grid-cols-3 gap-4">
         {/* Programming Languages */}
         <div className="bg-gray-200 rounded-md overflow-hidden border border-gray-500">
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-300 rounded-t-md">
