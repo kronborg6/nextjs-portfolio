@@ -20,15 +20,15 @@ export default function Home() {
       <h1 className="text-9xl mb-12">Kronborg</h1>
       <div className="grid auto-rows-fr grid-cols-3 gap-4">
         {/* Programming Languages */}
-        <div className="bg-gray-200 rounded-md overflow-hidden border border-gray-500">
-          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-300 rounded-t-md">
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             programming Languages
           </h2>
           <div className="grid grid-cols-2 gap-4 p-4">
             {programmingLanguages.map((data) => (
               <div
                 key={data.id}
-                className="bg-blue-300 border border-gray-400 p-4 rounded-md"
+                className="bg-blue-800 border border-gray-700 p-4 rounded-md"
               >
                 <p>
                   {data.name} - {data.year} years
@@ -40,15 +40,15 @@ export default function Home() {
         </div>
 
         {/* Skills */}
-        <div className="bg-gray-200 rounded-md overflow-hidden border border-gray-500">
-          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-300 rounded-t-md">
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Skills
           </h2>
           <div className="grid grid-cols-2 gap-4 p-4">
             {skills.map((data) => (
               <div
                 key={data.id}
-                className="bg-green-300 border border-gray-400 p-4 rounded-md"
+                className="bg-green-800 border border-gray-700 p-4 rounded-md"
               >
                 <p>
                   {data.name} - {data.year} years
@@ -60,15 +60,15 @@ export default function Home() {
         </div>
 
         {/* Frameworks */}
-        <div className="bg-gray-200 rounded-md overflow-hidden border border-gray-500">
-          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-300 rounded-t-md">
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Frameworks
           </h2>
           <div className="grid grid-cols-2 gap-4 p-4">
             {frameworks.map((data) => (
               <div
                 key={data.id}
-                className="bg-red-300 border border-gray-400 p-4 rounded-md"
+                className="bg-red-800 border border-gray-700 p-4 rounded-md"
               >
                 <p>
                   {data.name} - {data.year} years
