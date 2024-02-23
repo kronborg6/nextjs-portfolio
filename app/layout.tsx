@@ -31,7 +31,7 @@ export default function RootLayout({
                   Projects
                 </span>
               </Link>
-              <Link href="/home">
+              {/*              <Link href="/home">
                 <span className="transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Home
                 </span>
@@ -41,6 +41,7 @@ export default function RootLayout({
                   Test
                 </span>
               </Link>
+              */}
             </nav>
             <nav className="flex space-x-4 ml-auto">
               <Link
