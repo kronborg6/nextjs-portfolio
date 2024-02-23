@@ -1,17 +1,29 @@
 const programmingLanguages = [
   { id: 1, name: "go", year: 1 },
-  { id: 2, name: "Rust", year: 2 },
-  { id: 3, name: "C++", year: 20 },
+  { id: 2, name: "JavaScript", year: 2 },
+  { id: 3, name: "C#", year: 20 },
 ];
 const skills = [
-  { id: 1, name: "go", year: 1 },
-  { id: 2, name: "Rust", year: 2 },
-  { id: 3, name: "C++", year: 20 },
+  { id: 1, name: "Git", year: 1 },
+  { id: 2, name: "Postman", year: 2 },
+  { id: 2, name: "Scrum", year: 2 },
+  { id: 2, name: "Vs Code", year: 2 },
+  // { id: 3, name: "C++", year: 20 },
+];
+const database = [
+  { id: 1, name: "Postgres" },
+  { id: 2, name: "MySql" },
+  { id: 3, name: "Sql Server" },
+  { id: 4, name: "Redis" },
 ];
 const frameworks = [
-  { id: 1, name: "go", year: 1 },
-  { id: 2, name: "Rust", year: 2 },
-  { id: 3, name: "C++", year: 20 },
+  { id: 1, name: "Prisma", year: 1 },
+  { id: 2, name: "Express", year: 2 },
+  { id: 7, name: "React", year: 2 },
+  { id: 6, name: "Nextjs", year: 2 },
+  { id: 3, name: "Gorm", year: 20 },
+  { id: 4, name: "GoFiber", year: 20 },
+  { id: 5, name: "Gorm", year: 20 },
 ];
 
 export default function Home() {
@@ -28,11 +40,9 @@ export default function Home() {
             {programmingLanguages.map((data) => (
               <div
                 key={data.id}
-                className="bg-blue-800 border border-gray-700 p-4 rounded-md"
+                className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md"
               >
-                <p>
-                  {data.name} - {data.year} years
-                </p>
+                <p>{data.name}</p>
               </div>
             ))}
             {/* Add more programming languages as needed */}
@@ -48,11 +58,9 @@ export default function Home() {
             {skills.map((data) => (
               <div
                 key={data.id}
-                className="bg-green-800 border border-gray-700 p-4 rounded-md"
+                className="bg-green-800 border border-gray-700 text-center p-3 rounded-md"
               >
-                <p>
-                  {data.name} - {data.year} years
-                </p>
+                <p>{data.name}</p>
               </div>
             ))}
             {/* Add more skills as needed */}
@@ -68,11 +76,9 @@ export default function Home() {
             {frameworks.map((data) => (
               <div
                 key={data.id}
-                className="bg-red-800 border border-gray-700 p-4 rounded-md"
+                className="bg-red-800 border border-gray-700 p-3 text-center rounded-md"
               >
-                <p>
-                  {data.name} - {data.year} years
-                </p>
+                <p>{data.name}</p>
               </div>
             ))}
             {/* Add more frameworks as needed */}

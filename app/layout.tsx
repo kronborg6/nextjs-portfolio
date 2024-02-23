@@ -26,14 +26,19 @@ export default function RootLayout({
               </h1>
             </Link>
             <nav className="md:flex space-x-4 mx-10">
-              {/*              <Link href="/projects">
-                <span className="border-r pr-3 transition-colors hover:rounded-md hover:pr-0 hover:mr-3 hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
+              <Link href="/projects">
+                <span className="transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Projects
                 </span>
-              </Link>*/}
-              <Link href="/projects">
-                <span className="border-r pr-3 transition-colors hover:rounded-md hover:pr-0 hover:mr-3 hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
-                  Projects
+              </Link>
+              <Link href="/home">
+                <span className="transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
+                  Home
+                </span>
+              </Link>
+              <Link href="/test">
+                <span className=" transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
+                  Test
                 </span>
               </Link>
             </nav>
