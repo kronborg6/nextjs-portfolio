@@ -50,10 +50,7 @@ export default function Home() {
       <h1 className="text-7xl mb-12">
         Hey I am <span className="font-bold">Kronborg</span>
       </h1>
-      <p>
-        i am 23 years old just grarduated from cphbusiness with a AP in computer
-        science
-      </p>
+      <p>i am 23 years old developer from Denmark </p>
       <div className="gap-4 space-y-4 mx-auto max-w-prose mt-4 sm:mt-8">
         {/* Programming Languages */}
         <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
