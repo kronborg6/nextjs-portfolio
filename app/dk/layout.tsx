@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="bg-gray-900 text-white py-2">
           <div className="container mx-auto flex  items-center">
-            <Link href="/dk/">
+            <Link href="/">
               <h1 className="px-5 border-r-2 font-bold text-lg">
                 KronborgCode
               </h1>
@@ -73,7 +73,6 @@ export default function RootLayout({
                 <svg
                   stroke="currentColor"
                   fill="none"
-                  stroke-width="2"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                   height="1em"
