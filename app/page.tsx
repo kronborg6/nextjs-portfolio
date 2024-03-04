@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center py-12 min-h-screen">
       <h1 className="text-7xl mb-12">
-        Hey I am <span className="font-bold">Kronborg</span>
+        Welcom to Kronborg<span className="font-bold">Code</span>
       </h1>
       <p>i am 23 years old developer from Denmark </p>
       <div className="gap-4 space-y-4 mx-auto max-w-prose mt-4 sm:mt-8">

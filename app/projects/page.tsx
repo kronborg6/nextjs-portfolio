@@ -21,14 +21,14 @@ const projects = [
   {
     id: 3,
     title: "SimSvend",
-    dec: "Jeg har lavet det her",
+    dec: "api for the padel app",
     tags: [tags[4], tags[11], tags[10]],
     links: ["", "https://github.com/kronborg6/SimSvendApi", ""],
   },
   {
     id: 4,
     title: "Sea of Keys",
-    dec: "Jeg har lavet det her",
+    dec: "is my last exame project",
     tags: [tags[4], tags[9], tags[7]],
     links: ["", "https://github.com/orgs/Sea-of-Keys/repositories"],
   },
