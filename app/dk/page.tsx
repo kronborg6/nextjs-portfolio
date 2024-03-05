@@ -1,4 +1,4 @@
-import tags from "../data/tags";
+// import tags from "../../data/tags";
 const programmingLanguages = [
   { id: 1, name: "go", year: 1 },
   { id: 2, name: "JavaScript", year: 2 },
