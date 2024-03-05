@@ -1,5 +1,5 @@
 // import tags from "../../../data/tags";
-import tags from "../../../data/tags";
+import tags from "../../data/tags";
 const projects = [
   {
     id: 1,
