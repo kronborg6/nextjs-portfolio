@@ -1,302 +1,132 @@
-const tags = ["C#", "C++", "JavaScript", "TypeScript", "Golang", "Rust"];
-const projects = [
-  {
-    id: 1,
-    title: "Hjemmeside",
-    dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[2], tags[4]],
-    links: ["https://www.google.com", "https://www.facebook.com"],
-  },
-  {
-    id: 2,
-    title: "Hjemmeside",
-    dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[3], tags[4]],
-    links: ["https://www.google.com", "https://www.facebook.com"],
-  },
-  {
-    id: 3,
-    title: "Hjemmeside",
-    dec: "Jeg har lavet det her",
-    tags: [tags[0], tags[2], tags[4]],
-    links: ["https://www.google.com", "https://www.facebook.com", ""],
-  },
+import tags from "../data/tags";
+const programmingLanguages = [
+  { id: 1, name: "go", year: 1 },
+  { id: 2, name: "JavaScript", year: 2 },
+  { id: 3, name: "C#", year: 20 },
+];
+const skills = [
+  { id: 1, name: "Git", year: 1 },
+  { id: 2, name: "Postman", year: 2 },
+  { id: 2, name: "Scrum", year: 2 },
+  { id: 2, name: "Vs Code", year: 2 },
+  // { id: 3, name: "C++", year: 20 },
+];
+const database = [
+  { id: 1, name: "Postgres" },
+  { id: 2, name: "MySql" },
+  { id: 3, name: "Sql Server" },
+  { id: 4, name: "Redis" },
+];
+const frameworks = [
+  { id: 1, name: "Prisma", year: 1 },
+  { id: 2, name: "Express", year: 2 },
+  { id: 7, name: "React", year: 2 },
+  { id: 6, name: "Nextjs", year: 2 },
+  { id: 3, name: "Gorm", year: 20 },
+  { id: 4, name: "GoFiber", year: 20 },
+  { id: 5, name: "Gorm", year: 20 },
 ];
 
-export default function Project() {
+// const projects = [
+//   {
+//     id: 1,
+//     title: "SimSvend",
+//     dec: "Jeg har lavet det her",
+//     tags: [tags[4], tags[11], tags[10]],
+//     links: ["", "https://github.com/kronborg6/SimSvendApi", ""],
+//   },
+//   {
+//     id: 2,
+//     title: "Sea of Keys",
+//     dec: "Jeg har lavet det her",
+//     tags: [tags[4], tags[9], tags[7]],
+//     links: ["", "https://github.com/orgs/Sea-of-Keys/repositories"],
+//   },
+// ];
+
+export default function Home() {
   return (
-    <div className="grid auto-rows-fr grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-      <div className="relative overflow-clip rounded-md border border-border transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-transparent hover:bg-transparent hover:before:bg-card-gradient-hover sm:hover:scale-[1.025] [&amp;:hover>div]:bg-card-dots-hover [&amp;:hover_.darken-bg]:bg-black [&amp;:hover_.darken-bg]:bg-opacity-30">
-        <div className="z-20 flex h-full w-full flex-col gap-4 bg-card-dots p-card-inner transition-[background-position] duration-300 ease-in-out">
-          <div className="flex-1">
-            <div className="darken-bg rounded-md bg-chip bg-opacity-70 px-3 py-2">
-              <span className="text-xl font-bold">DangerousTool</span>
-              <div className="text-sm text-white transition-colors">
-                <p>
-                  DangerousTool is a utility for{" "}
-                  <a
-                    href="https://www.elitedangerous.com/"
-                    className='inline-block whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Elite: Dangerous
-                  </a>{" "}
-                  players that shows the current position and status in{" "}
-                  <a
-                    href="https://discord.com"
-                    className='inline-block whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Discord
-                  </a>
-                  .
-                </p>
-                <p>
-                  I made this when playing{" "}
-                  <a
-                    href="https://www.elitedangerous.com/"
-                    className='inline-block whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Elite: Dangerous
-                  </a>{" "}
-                  and my friend mentioned that they have a semi-stable event
-                  stream on the filesystem.
-                </p>
+    <main className="flex flex-col items-center py-12 min-h-screen">
+      <h1 className="sm:text-3xl md:text-5xl lg:text-7xl mb-12">
+        Velkomme til Kronborg<span className="font-bold">Code</span>
+      </h1>
+      <p>
+        jeg er 23 blevet færdiguddannet som datatekniker med speciale i
+        programmering
+      </p>
+      <div className="gap-4 space-y-4 mx-auto max-w-prose mt-4 sm:mt-8">
+        {/* Programming Languages */}
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
+            programming sprog
+          </h2>
+          <div className="flex flex-wrap gap-2 m-3">
+            {programmingLanguages.map((data) => (
+              <div
+                key={data.id}
+                className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md"
+              >
+                <p>{data.name}</p>
               </div>
-            </div>
+            ))}
+            {/* Add more programming languages as needed */}
           </div>
-          <div className="flex gap-card">
-            <div className="flex w-full flex-1 flex-wrap items-end gap-1">
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                TypeScript
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Next.js
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                TailwindCSS
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Node.js
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                uWebSockets.js
-              </span>
-            </div>
-            <div className="flex h-full w-fit items-end justify-end">
-              <div className="darken-bg flex flex-col space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
-                <a
-                  aria-label="DangerousTool"
-                  href="https://dangeroustool.devminer.xyz"
-                  className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M19.902 4.098a3.75 3.75 0 00-5.304 0l-4.5 4.5a3.75 3.75 0 001.035 6.037.75.75 0 01-.646 1.353 5.25 5.25 0 01-1.449-8.45l4.5-4.5a5.25 5.25 0 117.424 7.424l-1.757 1.757a.75.75 0 11-1.06-1.06l1.757-1.757a3.75 3.75 0 000-5.304zm-7.389 4.267a.75.75 0 011-.353 5.25 5.25 0 011.449 8.45l-4.5 4.5a5.25 5.25 0 11-7.424-7.424l1.757-1.757a.75.75 0 111.06 1.06l-1.757 1.757a3.75 3.75 0 105.304 5.304l4.5-4.5a3.75 3.75 0 00-1.035-6.037.75.75 0 01-.354-1z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
+        </div>
+
+        {/* Skills */}
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
+            Skills
+          </h2>
+          <div className="flex flex-wrap gap-2 m-3">
+            {skills.map((data) => (
+              <div
+                key={data.id}
+                className="bg-green-800 border border-gray-700 text-center p-3 rounded-md"
+              >
+                <p>{data.name}</p>
               </div>
-            </div>
+            ))}
+            {/* Add more skills as needed */}
+          </div>
+        </div>
+
+        {/* Frameworks */}
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
+            Frameworks
+          </h2>
+          <div className="flex flex-wrap gap-2 m-3">
+            {frameworks.map((data) => (
+              <div
+                key={data.id}
+                className="bg-red-800 border border-gray-700 p-3 text-center rounded-md"
+              >
+                <p>{data.name}</p>
+              </div>
+            ))}
+            {/* Add more frameworks as needed */}
+          </div>
+        </div>
+
+        {/* Frameworks */}
+        <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
+          <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
+            Databases
+          </h2>
+          <div className="flex flex-wrap gap-2 m-3">
+            {database.map((data) => (
+              <div
+                key={data.id}
+                className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md"
+              >
+                <p>{data.name}</p>
+              </div>
+            ))}
+            {/* Add more frameworks as needed */}
           </div>
         </div>
       </div>
-      <div className="relative overflow-clip rounded-md border border-border transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-transparent hover:bg-transparent hover:before:bg-card-gradient-hover sm:hover:scale-[1.025] [&amp;:hover>div]:bg-card-dots-hover [&amp;:hover_.darken-bg]:bg-black [&amp;:hover_.darken-bg]:bg-opacity-30">
-        <div className="z-20 flex h-full w-full flex-col gap-4 bg-card-dots p-card-inner transition-[background-position] duration-300 ease-in-out">
-          <div className="flex-1">
-            <div className="darken-bg rounded-md bg-chip bg-opacity-70 px-3 py-2">
-              <span className="text-xl font-bold">sh.devminer.xyz</span>
-              <div className="text-sm text-white transition-colors">
-                <p>
-                  Collection of my shell scripts with syntax highlighting
-                  powered by{" "}
-                  <a
-                    href="https://github.com/alecthomas/chroma"
-                    className='inline-block whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
-                    rel="noopener noreferrer"
-                  >
-                    chroma
-                  </a>
-                  .
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-card">
-            <div className="flex w-full flex-1 flex-wrap items-end gap-1">
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Golang
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                TailwindCSS
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Templ
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                GoStatic
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                github.com/alecthomas/chroma
-              </span>
-            </div>
-            <div className="flex h-full w-fit items-end justify-end">
-              <div className="darken-bg flex flex-col space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
-                <a
-                  className=""
-                  aria-label="Page"
-                  href="https://sh.devminer.xyz"
-                >
-                  <span className="inline-block whitespace-nowrap transition-colors text-white hover:text-black">
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      height="20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </a>
-                <a
-                  aria-label="GitHub"
-                  href="https://github.com/TheDevMinerTV/sh.devminer.xyz"
-                  className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="relative overflow-clip rounded-md border border-border transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-transparent hover:bg-transparent hover:before:bg-card-gradient-hover sm:hover:scale-[1.025] [&amp;:hover>div]:bg-card-dots-hover [&amp;:hover_.darken-bg]:bg-black [&amp;:hover_.darken-bg]:bg-opacity-30">
-        <div className="z-20 flex h-full w-full flex-col gap-4 bg-card-dots p-card-inner transition-[background-position] duration-300 ease-in-out">
-          <div className="flex-1">
-            <div className="darken-bg rounded-md bg-chip bg-opacity-70 px-3 py-2">
-              <span className="text-xl font-bold">ClusterTOP</span>
-              <div className="text-sm text-white transition-colors">
-                <p>
-                  Public statistics for my Kubernetes cluster powered by{" "}
-                  <a
-                    href="https://prometheus.io"
-                    className='inline-block whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
-                    rel="noopener noreferrer"
-                  >
-                    Prometheus
-                  </a>
-                  .
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-card">
-            <div className="flex w-full flex-1 flex-wrap items-end gap-1">
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Golang
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                TailwindCSS
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Fiber
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Templ
-              </span>
-              <span className="rounded-md bg-chip bg-opacity-70 px-2 py-1 text-center text-xs text-white transition-colors">
-                Prometheus
-              </span>
-            </div>
-            <div className="flex h-full w-fit items-end justify-end">
-              <div className="darken-bg flex flex-col space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
-                <a
-                  className=""
-                  aria-label="Page"
-                  href="https://stats.k8s.devminer.xyz"
-                >
-                  <span className="inline-block whitespace-nowrap transition-colors text-white hover:text-black">
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      height="20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </a>
-                <a
-                  aria-label="GitHub"
-                  href="https://github.com/TheDevMinerTV/clustertop"
-                  className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }
