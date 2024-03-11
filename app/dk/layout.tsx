@@ -67,7 +67,7 @@ export default function RootLayout({
         </header>
         {children}
         <Analytics />
-        {/*        <footer className="flex flex-col items-center justify-center border-t border-opacity-50 border-blue-500 px-4 py-4">
+        <footer className="flex flex-col items-center justify-center border-t border-opacity-50 border-blue-500 px-4 py-4">
           <div className="">
             <div className="flex flex-1 select-none flex-col max-3xs:items-center">
               <div className="flex items-center gap-2">
@@ -98,7 +98,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-        </footer> */}
+        </footer>
       </body>
     </html>
   );
