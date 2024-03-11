@@ -80,11 +80,8 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {programmingLanguages.map((data) => (
-              <a href={data.link} target="_blank">
-                <div
-                  key={data.id}
-                  className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md"
-                >
+              <a key={data.id} href={data.link} target="_blank">
+                <div className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md">
                   <p>{data.name}</p>
                 </div>
               </a>
@@ -100,11 +97,8 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {skills.map((data) => (
-              <a href={data.link} target="_blank">
-                <div
-                  key={data.id}
-                  className="bg-green-800 border border-gray-700 text-center p-3 rounded-md"
-                >
+              <a key={data.id} href={data.link} target="_blank">
+                <div className="bg-green-800 border border-gray-700 text-center p-3 rounded-md">
                   <p>{data.name}</p>
                 </div>
               </a>
@@ -120,11 +114,8 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {frameworks.map((data) => (
-              <a href={data.link} target="_blank">
-                <div
-                  key={data.id}
-                  className="bg-red-800 border border-gray-700 p-3 text-center rounded-md"
-                >
+              <a key={data.id} href={data.link} target="_blank">
+                <div className="bg-red-800 border border-gray-700 p-3 text-center rounded-md">
                   <p>{data.name}</p>
                 </div>
               </a>
@@ -140,11 +131,8 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {database.map((data) => (
-              <a href={data.link} target="_blank">
-                <div
-                  key={data.id}
-                  className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md"
-                >
+              <a key={data.id} href={data.link} target="_blank">
+                <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
                   <p>{data.name}</p>
                 </div>
               </a>
