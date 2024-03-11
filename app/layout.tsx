@@ -45,6 +45,7 @@ export default function RootLayout({
             </nav>
             <nav className="flex space-x-4 ml-auto">
               <Link
+                target="_blank"
                 className="flex items-center rounded-md p-2 text-white transition-colors hover:bg-white hover:bg-opacity-[15%]"
                 href="https://github.com/kronborg6"
               >
