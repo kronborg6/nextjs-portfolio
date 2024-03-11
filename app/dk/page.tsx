@@ -1,32 +1,52 @@
 // import tags from "../../data/tags";
 const programmingLanguages = [
-  { id: 1, name: "go", year: 1 },
-  { id: 2, name: "JavaScript", year: 2 },
-  { id: 3, name: "C#", year: 20 },
+  { id: 1, name: "go", year: 1, link: "https://golang.org/" },
+  { id: 2, name: "JavaScript", year: 2, link: "https://www.javascript.com/" },
+  {
+    id: 5,
+    name: "TypeScript",
+    year: 20,
+    link: "https://www.typescriptlang.org/",
+  },
+  {
+    id: 3,
+    name: "C#",
+    year: 20,
+    link: "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+  },
+
+  { id: 4, name: "Python", year: 20, link: "https://www.python.org/" },
 ];
 const skills = [
-  { id: 1, name: "Git", year: 1 },
-  { id: 2, name: "Postman", year: 2 },
-  { id: 2, name: "Scrum", year: 2 },
-  { id: 2, name: "Vs Code", year: 2 },
+  { id: 1, name: "Git", year: 1, link: "https://git-scm.com/" },
+  { id: 2, name: "Postman", year: 2, link: "https://www.postman.com/" },
+  {
+    id: 2,
+    name: "Scrum",
+    year: 2,
+    link: "https://www.scrum.org/resources/what-scrum-module",
+  },
+  { id: 2, name: "Vs Code", year: 2, link: "https://code.visualstudio.com/" },
   // { id: 3, name: "C++", year: 20 },
 ];
 const database = [
-  { id: 1, name: "Postgres" },
-  { id: 2, name: "MySql" },
-  { id: 3, name: "Sql Server" },
-  { id: 4, name: "Redis" },
+  { id: 1, name: "Postgres", link: "https://www.postgresql.org/" },
+  { id: 2, name: "MySql", link: "https://www.mysql.com/" },
+  {
+    id: 3,
+    name: "Sql Server",
+    link: "https://en.wikipedia.org/wiki/Microsoft_SQL_Server",
+  },
+  { id: 4, name: "Redis", link: "https://redis.io/" },
 ];
 const frameworks = [
-  { id: 1, name: "Prisma", year: 1 },
-  { id: 2, name: "Express", year: 2 },
-  { id: 7, name: "React", year: 2 },
-  { id: 6, name: "Nextjs", year: 2 },
-  { id: 3, name: "Gorm", year: 20 },
-  { id: 4, name: "GoFiber", year: 20 },
-  { id: 5, name: "Gorm", year: 20 },
+  { id: 1, name: "Prisma", year: 1, link: "https://www.prisma.io/" },
+  { id: 2, name: "Expressjs", year: 2, link: "https://expressjs.com/" },
+  { id: 7, name: "React", year: 2, link: "https://react.dev/" },
+  { id: 6, name: "Nextjs", year: 2, link: "https://nextjs.org/" },
+  { id: 3, name: "Gorm", year: 20, link: "https://gorm.io/index.html" },
+  { id: 4, name: "GoFiber", year: 20, link: "https://gofiber.io/" },
 ];
-
 // const projects = [
 //   {
 //     id: 1,
@@ -58,16 +78,18 @@ export default function Home() {
         {/* Programming Languages */}
         <div className="bg-gray-950 rounded-md overflow-hidden border-2 border-gray-700">
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
-            programming sprog
+            Programming Sprog
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {programmingLanguages.map((data) => (
-              <div
-                key={data.id}
-                className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md"
-              >
-                <p>{data.name}</p>
-              </div>
+              <a href={data.link} target="_blank">
+                <div
+                  key={data.id}
+                  className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md"
+                >
+                  <p>{data.name}</p>
+                </div>
+              </a>
             ))}
             {/* Add more programming languages as needed */}
           </div>
@@ -80,12 +102,14 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {skills.map((data) => (
-              <div
-                key={data.id}
-                className="bg-green-800 border border-gray-700 text-center p-3 rounded-md"
-              >
-                <p>{data.name}</p>
-              </div>
+              <a href={data.link} target="_blank">
+                <div
+                  key={data.id}
+                  className="bg-green-800 border border-gray-700 text-center p-3 rounded-md"
+                >
+                  <p>{data.name}</p>
+                </div>
+              </a>
             ))}
             {/* Add more skills as needed */}
           </div>
@@ -98,12 +122,14 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {frameworks.map((data) => (
-              <div
-                key={data.id}
-                className="bg-red-800 border border-gray-700 p-3 text-center rounded-md"
-              >
-                <p>{data.name}</p>
-              </div>
+              <a href={data.link} target="_blank">
+                <div
+                  key={data.id}
+                  className="bg-red-800 border border-gray-700 p-3 text-center rounded-md"
+                >
+                  <p>{data.name}</p>
+                </div>
+              </a>
             ))}
             {/* Add more frameworks as needed */}
           </div>
@@ -116,12 +142,14 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-2 m-3">
             {database.map((data) => (
-              <div
-                key={data.id}
-                className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md"
-              >
-                <p>{data.name}</p>
-              </div>
+              <a href={data.link} target="_blank">
+                <div
+                  key={data.id}
+                  className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md"
+                >
+                  <p>{data.name}</p>
+                </div>
+              </a>
             ))}
             {/* Add more frameworks as needed */}
           </div>
