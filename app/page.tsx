@@ -21,12 +21,12 @@ const skills = [
   { id: 1, name: "Git", year: 1, link: "https://git-scm.com/" },
   { id: 2, name: "Postman", year: 2, link: "https://www.postman.com/" },
   {
-    id: 2,
+    id: 3,
     name: "Scrum",
     year: 2,
     link: "https://www.scrum.org/resources/what-scrum-module",
   },
-  { id: 2, name: "Vs Code", year: 2, link: "https://code.visualstudio.com/" },
+  { id: 4, name: "Vs Code", year: 2, link: "https://code.visualstudio.com/" },
   // { id: 3, name: "C++", year: 20 },
 ];
 const database = [
