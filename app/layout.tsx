@@ -66,38 +66,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </header>
         {children}
         <Analytics />
-        <footer className="flex flex-col items-center justify-center border-t border-opacity-50 border-blue-500 px-4 py-4">
-          <div className="">
-            <div className="flex flex-1 select-none flex-col max-3xs:items-center">
-              <div className="flex items-center gap-2">
-                <svg
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-                <a
-                  aria-label="My Email Address"
-                  href="mailto:mkronborg@gmail.com"
-                  className='inline-block font-bold whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  mkronborgcode@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
       </body>
     </html>
   );
