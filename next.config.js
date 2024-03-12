@@ -3,7 +3,7 @@ const nextConfig = {
   i18n: {
     // These are all the locales you want to support in
     // your application
-    locales: ["en-US", "dk"],
+    locales: ["en-US", "dk", "localhost"],
     // This is the default locale you want to be used when visiting
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: "en-US",
@@ -15,12 +15,14 @@ const nextConfig = {
       {
         domain: "kronborgcode.com",
         defaultLocale: "en-US",
-        http: true,
       },
       {
         domain: "kronborgcode.dk",
         defaultLocale: "dk",
-        http: true,
+      },
+      {
+        domain: "localhost.dk",
+        defaultLocale: "localhost",
       },
     ],
   },
