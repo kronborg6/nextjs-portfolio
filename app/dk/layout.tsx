@@ -31,6 +31,11 @@ export default function RootLayout({
                   Projects
                 </span>
               </Link>
+              <Link href="/" locale="en-US">
+                <span className="transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
+                  English
+                </span>
+              </Link>
               {/*              <Link href="/home">
                 <span className="transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Home
