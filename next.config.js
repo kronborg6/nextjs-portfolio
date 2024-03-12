@@ -22,9 +22,6 @@ const nextConfig = {
         defaultLocale: "dk",
         http: true,
       },
-      {
-        domain: "localhost",
-      },
     ],
   },
 };
