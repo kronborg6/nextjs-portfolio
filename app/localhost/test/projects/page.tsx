@@ -1,9 +1,10 @@
-import tags from "../../data/tags";
+import tags from "../../../../data/tags";
+// import tags from "../../data/tags";
 const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    dec: "Website to collect my projects and info",
+    dec: "En side til at vise min proejeter",
     tags: [tags[3]],
     links: [
       "",
@@ -13,22 +14,22 @@ const projects = [
   },
   {
     id: 2,
-    title: "Pick your electives website",
-    dec: "Api and database made by me",
+    title: "Sde Valgfag",
+    dec: "jeg stod for Api og database",
     tags: [tags[2], tags[8], tags[7]],
     links: ["", "", "https://valgfag.sde.dk/login/"],
   },
   {
     id: 3,
     title: "SimSvend",
-    dec: "Api for the padel app",
+    dec: "api og database for paddel app",
     tags: [tags[4], tags[11], tags[10]],
     links: ["", "https://github.com/kronborg6/SimSvendApi", ""],
   },
   {
     id: 4,
     title: "Sea of Keys",
-    dec: "My last exame project",
+    dec: "min svendeprøve projekt",
     tags: [tags[4], tags[9], tags[7]],
     links: ["", "https://github.com/orgs/Sea-of-Keys/repositories"],
   },
@@ -54,8 +55,8 @@ export default function Project() {
       <div className="flex-1 gap-8 p-4 transition-[padding] sm:p-8">
         <div className="mx-auto h-full max-w-6xl">
           <div className="mx-auto mb-4 max-w-prose text-center">
-            <h1 className="text-4xl font-bold text-white mb-2">Projects</h1>
-            <p>Here are some of the projects I have made.</p>
+            <h1 className="text-4xl font-bold text-white mb-2">Projekter</h1>
+            <p>Her er som af de projecter jeg har lavet</p>
           </div>
           <div className="grid auto-rows-fr grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {projects.map((data) => (
@@ -89,7 +90,7 @@ export default function Project() {
                         <div className="flex h-full w-fit items-end justify-end">
                           <div className="darken-bg flex flex-col items-end space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
                             {data.links[0] ? (
-                              <a href={data.links[0]} target="_blank">
+                              <a href={data.links[0]}>
                                 <span className="inline-block whitespace-nowrap transition-colors items-end text-white hover:text-black">
                                   <svg
                                     stroke="currentColor"
@@ -107,7 +108,6 @@ export default function Project() {
                             ) : null}
                             {data.links[1] ? (
                               <a
-                                target="_blank"
                                 aria-label="GitHub"
                                 className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
                                 href={data.links[1]}
