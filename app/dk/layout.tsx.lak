@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="dk">
       <body className={inter.className}>
         <header className="bg-gray-900 text-white py-2">
           <div className="container mx-auto flex  items-center">
@@ -31,7 +31,8 @@ export default function RootLayout({
                   Projects
                 </span>
               </Link>
-              {/*              <Link href="/home">
+              {/*
+               <Link href="/home">
                 <span className="transition-colors hover:rounded-md hover:pr-0  hover:border-transparent hover:bg-white hover:bg-opacity-[15%]">
                   Home
                 </span>

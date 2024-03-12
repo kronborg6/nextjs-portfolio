@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html>
       <body className={inter.className}>
         <header className="bg-gray-900 text-white py-2">
           <div className="container mx-auto flex  items-center">
@@ -87,7 +87,7 @@ export default function RootLayout({
                 </svg>
                 <a
                   aria-label="My Email Address"
-                  href="mailto:hi@devminer.xyz"
+                  href="mailto:mkronborg@gmail.com"
                   className='inline-block font-bold whitespace-nowrap transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-blue-400 after:transition-transform after:content-[""] hover:after:scale-x-100 hover:after:bg-blue-300 text-purple-400 hover:text-blue-300'
                   target="_blank"
                   rel="noopener noreferrer"
