@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 // import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -12,13 +13,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <body className={inter.className}>
-        {children}
-        <Analytics />
+        <Suspense fallback="Loading...">
+          {children}
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );
 }
-
+// export default function Layout({ children }: { children: React.ReactNode }) {
 // return (
 //   <html>
 //     <body className={inter.className}>
@@ -79,3 +82,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 //     </body>
 //   </html>
 // );
+// }
