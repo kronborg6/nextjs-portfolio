@@ -54,8 +54,8 @@ export default async function Page() {
                         </div>
                         <div className="flex h-full w-fit items-end justify-end">
                           <div className="darken-bg flex flex-col items-end space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
-                            {data.website ? (
-                              <a href={data.website} target="_blank">
+                            {data.download ? (
+                              <a href={data.download} target="_blank">
                                 <span className="inline-block whitespace-nowrap transition-colors items-end text-white hover:text-black">
                                   <svg
                                     stroke="currentColor"
@@ -91,10 +91,10 @@ export default async function Page() {
                                 </svg>
                               </a>
                             ) : null}
-                            {data.download ? (
+                            {data.website ? (
                               <a
                                 aria-label="DangerousTool"
-                                href={data.download}
+                                href={data.website}
                                 className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
                                 target="_blank"
                                 rel="noopener noreferrer"
