@@ -13,10 +13,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <body className={inter.className}>
-        <Suspense fallback="Loading...">
-          {children}
-          <Analytics />
-        </Suspense>
+        {children}
+        <Analytics />
       </body>
     </html>
   );

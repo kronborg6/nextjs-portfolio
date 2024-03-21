@@ -1,16 +1,16 @@
 import { Suspense } from "react";
 
-async function getData() {
-  const res = await fetch("http://localhost:8000/skills", {
+async function getData(id: number) {
+  const res = await fetch(`http://localhost:8000/skills/type/${id}`, {
     cache: "no-cache",
   });
 
   if (!res.ok) {
     throw new Error("faild to fetch");
   }
+  return res.json();
 }
 export default async function Page() {
-  const skills = await getData();
   return (
     <main className="flex flex-col items-center py-12 min-h-screen">
       <h1 className="text-7xl mb-12">
@@ -24,7 +24,7 @@ export default async function Page() {
             Programming Languages
           </h2>
           <Suspense fallback={<p>Loading feed...</p>}>
-            <Skills />
+            <ProgrammingLanguages />
           </Suspense>
         </div>
 
@@ -44,7 +44,7 @@ export default async function Page() {
             Frameworks
           </h2>
           <Suspense fallback={<p>Loading feed...</p>}>
-            <Skills />
+            <Frameowrks />
           </Suspense>
         </div>
 
@@ -54,7 +54,7 @@ export default async function Page() {
             Databases
           </h2>
           <Suspense fallback={<p>Loading feed...</p>}>
-            <Skills />
+            <Databases />
           </Suspense>
         </div>
       </div>
@@ -62,8 +62,8 @@ export default async function Page() {
   );
 }
 
-async function Skills() {
-  const programmingLanguages = await getData();
+async function ProgrammingLanguages() {
+  const programmingLanguages = await getData(1);
   return (
     <div className="flex flex-wrap gap-2 m-3">
       {programmingLanguages.map((data: any) => (
@@ -77,11 +77,11 @@ async function Skills() {
     </div>
   );
 }
-async function Skills2() {
-  const Skills = await getSkills();
+async function Skills() {
+  const skills = await getData(2);
   return (
     <div className="flex flex-wrap gap-2 m-3">
-      {frameworks.map((data) => (
+      {skills.map((data: any) => (
         <a key={data.id} href={data.link} target="_blank">
           <div className="bg-red-800 border border-gray-700 p-3 text-center rounded-md">
             <p>{data.name}</p>
@@ -92,10 +92,11 @@ async function Skills2() {
     </div>
   );
 }
-async function Skills3() {
+async function Frameowrks() {
+  const frameworks = await getData(3);
   return (
     <div className="flex flex-wrap gap-2 m-3">
-      {database.map((data) => (
+      {frameworks.map((data: any) => (
         <a key={data.id} href={data.link} target="_blank">
           <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
             <p>{data.name}</p>
@@ -106,4 +107,18 @@ async function Skills3() {
     </div>
   );
 }
-async function Skills4() {}
+async function Databases() {
+  const database = await getData(4);
+  return (
+    <div className="flex flex-wrap gap-2 m-3">
+      {database.map((data: any) => (
+        <a key={data.id} href={data.link} target="_blank">
+          <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
+            <p>{data.name}</p>
+          </div>
+        </a>
+      ))}
+      {/* Add more frameworks as needed */}
+    </div>
+  );
+}
