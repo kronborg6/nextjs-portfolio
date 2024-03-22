@@ -1,54 +1,17 @@
-import tags from "../../../data/tags";
-const projects = [
-  {
-    id: 1,
-    title: "Portfolio Website",
-    dec: "Website to collect my projects and info",
-    tags: [tags[3]],
-    links: [
-      "",
-      "https://github.com/kronborg6/nextjs-portfolio",
-      "https://www.kronborgcode.com",
-    ],
-  },
-  {
-    id: 2,
-    title: "Pick your electives website",
-    dec: "Api and database made by me",
-    tags: [tags[2], tags[8], tags[7]],
-    links: ["", "", "https://valgfag.sde.dk/login/"],
-  },
-  {
-    id: 3,
-    title: "SimSvend",
-    dec: "Api for the padel app",
-    tags: [tags[4], tags[11], tags[10]],
-    links: ["", "https://github.com/kronborg6/SimSvendApi", ""],
-  },
-  {
-    id: 4,
-    title: "Sea of Keys",
-    dec: "My last exame project",
-    tags: [tags[4], tags[9], tags[7]],
-    links: ["", "https://github.com/orgs/Sea-of-Keys/repositories"],
-  },
-  // {
-  //   id: 5,
-  //   title: "Hjemmeside",
-  //   dec: "Jeg har lavet det her",
-  //   tags: [tags[5], tags[3], tags[4]],
-  //   links: ["gg", "", ""],
-  // },
-  // {
-  //   id: 22,
-  //   title: "Hjemmeside",
-  //   dec: "Jeg har lavet det her",
-  //   tags: [tags[0], tags[2], tags[4]],
-  //   links: ["https://www.google.com", "https://www.facebook.com", ""],
-  // },
-];
+async function getData() {
+  const res = await fetch("https://kronborgapi.com/projects", {
+    cache: "no-store",
+  });
 
-export default function Project() {
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Project() {
+  const projects = await getData();
   return (
     <div className="flex flex-1 flex-col pt-12 min-h-screen">
       <div className="flex-1 gap-8 p-4 transition-[padding] sm:p-8">
@@ -58,7 +21,7 @@ export default function Project() {
             <p>Here are some of the projects I have made.</p>
           </div>
           <div className="grid auto-rows-fr grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-            {projects.map((data) => (
+            {projects.map((data: any) => (
               <div
                 key={data.id}
                 className="relative overflow-clip rounded-md border-2 border-gray-500 transition-transform ease-linear before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-card-gradient before:transition-[background-position] before:duration-300 before:ease-in-out before:content-[''] hover:border-gray-950 hover:before:bg-card-gradient-hover sm:hover:scale-[1.025]"
@@ -68,28 +31,29 @@ export default function Project() {
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
                       <div className="bg-gray-800 rounded-lg mb-10">
                         <span className="block text-center text-xl font-bold">
-                          {data.title}
+                          {data.name}
                         </span>
                         <div>
                           <br />
-                          <p className="mx-2">{data.dec}</p>
+                          <p className="mx-2">{data.description}</p>
                         </div>
                       </div>
                       <div className="flex gap-2 flex-wrap h-32">
                         <div className="flex w-full flex-1 flex-wrap items-end gap-4">
-                          {data.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="bg-gray-900 px-2 py-1 rounded-md"
-                            >
-                              {tag}
-                            </span>
+                          {/*
+                           */}
+                          {data.skills.map((tag: any) => (
+                            <a key={tag.id} href={tag.link} target="_blank">
+                              <span className="bg-gray-900 px-2 py-1 rounded-md">
+                                {tag.name}
+                              </span>
+                            </a>
                           ))}
                         </div>
                         <div className="flex h-full w-fit items-end justify-end">
                           <div className="darken-bg flex flex-col items-end space-y-1 rounded-full bg-chip bg-opacity-70 p-1">
-                            {data.links[0] ? (
-                              <a href={data.links[0]} target="_blank">
+                            {data.download ? (
+                              <a href={data.download} target="_blank">
                                 <span className="inline-block whitespace-nowrap transition-colors items-end text-white hover:text-black">
                                   <svg
                                     stroke="currentColor"
@@ -105,12 +69,12 @@ export default function Project() {
                                 </span>
                               </a>
                             ) : null}
-                            {data.links[1] ? (
+                            {data.github ? (
                               <a
                                 target="_blank"
                                 aria-label="GitHub"
                                 className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
-                                href={data.links[1]}
+                                href={data.github}
                               >
                                 <svg
                                   stroke="currentColor"
@@ -125,10 +89,10 @@ export default function Project() {
                                 </svg>
                               </a>
                             ) : null}
-                            {data.links[2] ? (
+                            {data.website ? (
                               <a
                                 aria-label="DangerousTool"
-                                href={data.links[2]}
+                                href={data.website}
                                 className="inline-block whitespace-nowrap transition-colors text-white hover:text-black"
                                 target="_blank"
                                 rel="noopener noreferrer"
