@@ -1,5 +1,5 @@
 async function getData() {
-  const res = await fetch("http://localhost:8000/projects", {
+  const res = await fetch("https://kronborgapi.com/projects", {
     cache: "no-store",
   });
 

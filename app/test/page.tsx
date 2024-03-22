@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 
 async function getData(id: number) {
-  const res = await fetch(`http://localhost:8000/skills/type/${id}`, {
+  const res = await fetch(`https://kronborgapi.com/skills/type/${id}`, {
     cache: "no-cache",
   });
 
