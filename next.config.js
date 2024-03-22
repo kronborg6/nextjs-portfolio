@@ -20,10 +20,6 @@ const nextConfig = {
         domain: "kronborgcode.dk",
         defaultLocale: "dk",
       },
-      {
-        domain: "localhost.dk",
-        defaultLocale: "localhost",
-      },
     ],
   },
 };
