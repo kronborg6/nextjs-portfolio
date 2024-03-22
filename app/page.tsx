@@ -1,5 +1,7 @@
 export default function Page() {
-  // console.log(projects);
-  // return <div>Kronborg</div>;
-  return <div>Kro</div>;
+  return (
+    <div>
+      <h1 className="text-9xl">Kronborg</h1>
+    </div>
+  );
 }
