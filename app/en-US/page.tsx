@@ -1,15 +1,15 @@
 import { Suspense } from "react";
 
-async function getData(id: number) {
-  const res = await fetch(`https://kronborgapi.com/skills/type/${id}`, {
-    cache: "no-cache",
-  });
+// async function getData(id: number) {
+//   const res = await fetch(`https://kronborgapi.com/skills/type/${id}`, {
+//     cache: "no-cache",
+//   });
 
-  if (!res.ok) {
-    throw new Error("faild to fetch");
-  }
-  return res.json();
-}
+//   if (!res.ok) {
+//     throw new Error("faild to fetch");
+//   }
+//   return res.json();
+// }
 
 export default function Home() {
   return (
@@ -24,9 +24,7 @@ export default function Home() {
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Programming Languages
           </h2>
-          <Suspense fallback={<p>Loading feed...</p>}>
-            <ProgrammingLanguages />
-          </Suspense>
+          <Suspense fallback={<p>Loading feed...</p>}></Suspense>
         </div>
 
         {/* Skills */}
@@ -34,9 +32,7 @@ export default function Home() {
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Skills
           </h2>
-          <Suspense fallback={<p>Loading feed...</p>}>
-            <Skills />
-          </Suspense>
+          <Suspense fallback={<p>Loading feed...</p>}></Suspense>
         </div>
 
         {/* Frameworks */}
@@ -44,9 +40,7 @@ export default function Home() {
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Frameworks
           </h2>
-          <Suspense fallback={<p>Loading feed...</p>}>
-            <Frameowrks />
-          </Suspense>
+          <Suspense fallback={<p>Loading feed...</p>}></Suspense>
         </div>
 
         {/* Frameworks */}
@@ -54,71 +48,69 @@ export default function Home() {
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Databases
           </h2>
-          <Suspense fallback={<p>Loading feed...</p>}>
-            <Databases />
-          </Suspense>
+          <Suspense fallback={<p>Loading feed...</p>}></Suspense>
         </div>
       </div>
     </main>
   );
 }
-async function ProgrammingLanguages() {
-  const programmingLanguages = await getData(1);
-  return (
-    <div className="flex flex-wrap gap-2 m-3">
-      {programmingLanguages.map((data: any) => (
-        <a key={data.id} href={data.link} target="_blank">
-          <div className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md">
-            <p>{data.name}</p>
-          </div>
-        </a>
-      ))}
-      {/* Add more programming languages as needed */}
-    </div>
-  );
-}
-async function Skills() {
-  const skills = await getData(2);
-  return (
-    <div className="flex flex-wrap gap-2 m-3">
-      {skills.map((data: any) => (
-        <a key={data.id} href={data.link} target="_blank">
-          <div className="bg-red-800 border border-gray-700 p-3 text-center rounded-md">
-            <p>{data.name}</p>
-          </div>
-        </a>
-      ))}
-      {/* Add more frameworks as needed */}
-    </div>
-  );
-}
-async function Frameowrks() {
-  const frameworks = await getData(3);
-  return (
-    <div className="flex flex-wrap gap-2 m-3">
-      {frameworks.map((data: any) => (
-        <a key={data.id} href={data.link} target="_blank">
-          <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
-            <p>{data.name}</p>
-          </div>
-        </a>
-      ))}
-      {/* Add more frameworks as needed */}
-    </div>
-  );
-}
-async function Databases() {
-  const database = await getData(4);
-  return (
-    <div className="flex flex-wrap gap-2 m-3">
-      {database.map((data: any) => (
-        <a key={data.id} href={data.link} target="_blank">
-          <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
-            <p>{data.name}</p>
-          </div>
-        </a>
-      ))}
-      {/* Add more frameworks as needed */}
-    </div>
-  );
-}
+// async function ProgrammingLanguages() {
+//   const programmingLanguages = await getData(1);
+//   return (
+//     <div className="flex flex-wrap gap-2 m-3">
+//       {programmingLanguages.map((data: any) => (
+//         <a key={data.id} href={data.link} target="_blank">
+//           <div className="bg-blue-800 border border-gray-700 text-center p-3 rounded-md">
+//             <p>{data.name}</p>
+//           </div>
+//         </a>
+//       ))}
+//       {/* Add more programming languages as needed */}
+//     </div>
+//   );
+// }
+// async function Skills() {
+//   const skills = await getData(2);
+//   return (
+//     <div className="flex flex-wrap gap-2 m-3">
+//       {skills.map((data: any) => (
+//         <a key={data.id} href={data.link} target="_blank">
+//           <div className="bg-red-800 border border-gray-700 p-3 text-center rounded-md">
+//             <p>{data.name}</p>
+//           </div>
+//         </a>
+//       ))}
+//       {/* Add more frameworks as needed */}
+//     </div>
+//   );
+// }
+// async function Frameowrks() {
+//   const frameworks = await getData(3);
+//   return (
+//     <div className="flex flex-wrap gap-2 m-3">
+//       {frameworks.map((data: any) => (
+//         <a key={data.id} href={data.link} target="_blank">
+//           <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
+//             <p>{data.name}</p>
+//           </div>
+//         </a>
+//       ))}
+//       {/* Add more frameworks as needed */}
+//     </div>
+//   );
+// }
+// async function Databases() {
+//   const database = await getData(4);
+//   return (
+//     <div className="flex flex-wrap gap-2 m-3">
+//       {database.map((data: any) => (
+//         <a key={data.id} href={data.link} target="_blank">
+//           <div className="bg-orange-800 border border-gray-700 p-3 text-center rounded-md">
+//             <p>{data.name}</p>
+//           </div>
+//         </a>
+//       ))}
+//       {/* Add more frameworks as needed */}
+//     </div>
+//   );
+// }
