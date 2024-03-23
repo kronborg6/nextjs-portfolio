@@ -32,11 +32,11 @@ export default async function Project() {
                     <div className="rounded-md bg-chip bg-opacity-70 px-3 py-2">
                       <div className="bg-gray-800 rounded-lg mb-10">
                         <span className="block text-center text-xl font-bold">
-                          {data.name}
+                          {data.name_dk}
                         </span>
                         <div>
                           <br />
-                          <p className="mx-2">{data.description}</p>
+                          <p className="mx-2">{data.description_dk}</p>
                         </div>
                       </div>
                       <div className="flex gap-2 flex-wrap h-32">
