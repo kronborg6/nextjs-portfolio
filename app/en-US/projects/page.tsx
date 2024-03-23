@@ -1,13 +1,14 @@
-async function getData() {
-  const res = await fetch("https://kronborgapi.com/projects", {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+async function getData(): Promise<any> {
+  try {
+    const response = await fetch(`https://kronborgapi.com/projects`);
+    if (!response.ok) {
+      throw new Error(`Unable to fetch data`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Some error:", error);
   }
-
-  return await res.json();
 }
 
 export default async function Project() {
