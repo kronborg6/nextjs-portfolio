@@ -1,4 +1,3 @@
-"use server";
 import { Suspense } from "react";
 
 async function getData(id: number): Promise<any> {
@@ -14,7 +13,7 @@ async function getData(id: number): Promise<any> {
   }
 }
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className="flex flex-col items-center py-12 min-h-screen">
       <h1 className="sm:text-3xl md:text-5xl lg:text-7xl mb-12">
