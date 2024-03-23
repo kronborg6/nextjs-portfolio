@@ -1,18 +1,19 @@
-"use server";
 import { Suspense } from "react";
 
-async function getData(id: number) {
-  const res = await fetch(`https://kronborgapi.com/skills/type/${id}`, {
-    cache: "no-cache",
-  });
-
-  if (!res.ok) {
-    throw new Error("faild to fetch");
+async function getData(id: number): Promise<any> {
+  try {
+    const response = await fetch(`https://kronborgapi.com/skills/type/${id}`);
+    if (!response.ok) {
+      throw new Error(`Unable to fetch data`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Some error:", error);
   }
-  return res.json();
 }
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className="flex flex-col items-center py-12 min-h-screen">
       <h1 className="sm:text-3xl md:text-5xl lg:text-7xl mb-12">
