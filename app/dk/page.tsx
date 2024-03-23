@@ -12,7 +12,7 @@ async function getData(id: number) {
   return res.json();
 }
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex flex-col items-center py-12 min-h-screen">
       <h1 className="sm:text-3xl md:text-5xl lg:text-7xl mb-12">
