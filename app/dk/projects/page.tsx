@@ -7,7 +7,7 @@ async function getData() {
     throw new Error("Failed to fetch data");
   }
 
-  return res.json();
+  return await res.json();
 }
 
 export default async function Project() {
