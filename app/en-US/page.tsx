@@ -8,7 +8,7 @@ async function getData(id: number) {
   if (!res.ok) {
     throw new Error("faild to fetch");
   }
-  return res.json();
+  return await res.json();
 }
 
 export default function Home() {
@@ -44,7 +44,9 @@ export default function Home() {
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Frameworks
           </h2>
-          <Suspense fallback={<p>Loading feed...</p>}></Suspense>
+          <Suspense fallback={<p>Loading feed...</p>}>
+            <Frameowrks />
+          </Suspense>
         </div>
 
         {/* Frameworks */}
@@ -52,7 +54,9 @@ export default function Home() {
           <h2 className="text-lg font-semibold mb-2 p-4 bg-gray-800 rounded-t-md">
             Databases
           </h2>
-          <Suspense fallback={<p>Loading feed...</p>}></Suspense>
+          <Suspense fallback={<p>Loading feed...</p>}>
+            <Databases />
+          </Suspense>
         </div>
       </div>
     </main>
