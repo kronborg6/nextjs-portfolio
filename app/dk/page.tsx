@@ -1,15 +1,17 @@
 "use server";
 import { Suspense } from "react";
 
-async function getData(id: number) {
-  const res = await fetch(`https://kronborgapi.com/skills/type/${id}`, {
-    cache: "no-cache",
-  });
-
-  if (!res.ok) {
-    throw new Error("faild to fetch");
+async function getData(id: number): Promise<any> {
+  try {
+    const response = await fetch(`https://kronborgapi.com/skills/type/${id}`);
+    if (!response.ok) {
+      throw new Error(`Unable to fetch data`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Some error:", error);
   }
-  return res.json();
 }
 
 export default async function Home() {
