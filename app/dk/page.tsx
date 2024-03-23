@@ -1,3 +1,4 @@
+"use server";
 import { Suspense } from "react";
 
 async function getData(id: number) {
