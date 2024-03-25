@@ -1,6 +1,8 @@
 async function getData(): Promise<any> {
   try {
-    const response = await fetch(`https://kronborgapi.com/projects`);
+    const response = await fetch(`https://kronborgapi.com/projects`, {
+      next: { revalidate: 30 },
+    });
     if (!response.ok) {
       throw new Error(`Unable to fetch data`);
     }

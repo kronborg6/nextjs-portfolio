@@ -2,7 +2,9 @@ import { Suspense } from "react";
 
 async function getData(id: number): Promise<any> {
   try {
-    const response = await fetch(`https://kronborgapi.com/skills/type/${id}`);
+    const response = await fetch(`https://kronborgapi.com/skills/type/${id}`, {
+      next: { revalidate: 30 },
+    });
     if (!response.ok) {
       throw new Error(`Unable to fetch data`);
     }
